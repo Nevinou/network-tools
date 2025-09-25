@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt install kea-dhcp4-server -y
 # copy du fichier de /etc/kea/kea-dhcp4.conf en /etc/kea/kea-dhcp4.conf_exemple
 sudo cp /etc/kea/kea-dhcp4.conf /home/user/kea-dhcp4.conf_exemple
