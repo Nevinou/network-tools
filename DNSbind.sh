@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo 'nameserver 129.20.211.23' > /etc/resolv.conf
 sudo apt install bind9 -y
 
