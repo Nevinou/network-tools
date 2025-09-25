@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt install apache2 -y
 
 # copy du fichier de /etc/apache2/sites-enabled/000-default.conf en /etc/apache2/sites-enabled/000-default.conf_exemple
