@@ -9,7 +9,7 @@ sudo apt install apache2 -y
 
 sudo bash -c 'cat > /etc/apache2/sites-enabled/site1.conf << EOF
 <VirtualHost *:80>
-	ServerName www.site1.mon.lan
+	ServerName www.site1.b13.lan
 	DocumentRoot /var/www/site1 
 	ErrorLog "/var/log/error_site.log" 
 	CustomLog "/var/log/access_site.log" combined 
@@ -19,7 +19,7 @@ EOF'
 
 sudo bash -c 'cat > /etc/apache2/sites-enabled/site2.conf << EOF
 <VirtualHost *:80>
-	ServerName www.site2.mon.lan
+	ServerName www.site2.b13.lan
 	DocumentRoot /var/www/site2 
 	ErrorLog "/var/log/error_site.log" 
 	CustomLog "/var/log/access_site.log" combined 
