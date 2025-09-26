@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-
+#comm
 # Variables (mets la bonne version/build depuis le site Splunk)
 VERSION="9.2.1"
 BUILD="<build>"   # à remplacer par le vrai numéro de build
