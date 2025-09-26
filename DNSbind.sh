@@ -33,7 +33,7 @@ file "/etc/bind/db.b13.lan";
 // ajouter la zone esclave
 zone "b14.lan"{
 type slave;
-file 
+file "/etc/bind/db.b14.lan"
 masters {10.10.14.1;}
 };
 EOF'
