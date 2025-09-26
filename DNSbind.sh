@@ -11,7 +11,7 @@ options {
 	allow-query {any;}; 
 	forward first;
 	forwarders {
-		129.20.211.23;
+		10.10.0.1;
 	};
 	listen-on { any;};
 };
@@ -36,6 +36,10 @@ type slave;
 file "/etc/bind/db.b14.lan";
 masters {10.10.14.1;};
 };
+zone "lan"{
+	type forward;
+	forwarders{10.10.0.1;};
+}
 EOF'
 sudo touch /etc/bind/db.13.lan
 sudo bash -c 'cat > /etc/bind/db.b13.lan << EOF
