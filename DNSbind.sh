@@ -29,6 +29,7 @@ sudo bash -c 'cat > /etc/bind/named.conf.local << EOF
 zone "b13.lan"{
 type master;
 file "/etc/bind/db.b13.lan";
+allow-transfer {10.10.12.1;};
 };
 // ajouter la zone esclave
 zone "b14.lan"{
