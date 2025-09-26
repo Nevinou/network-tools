@@ -11,8 +11,8 @@ sudo bash -c 'cat > /etc/apache2/sites-enabled/site1.conf << EOF
 <VirtualHost *:80>
 	ServerName www.site1.b13.lan
 	DocumentRoot /var/www/site1 
-	ErrorLog "/var/log/error_site.log" 
-	CustomLog "/var/log/access_site.log" combined 
+#	ErrorLog "/var/log/error_site.log" 
+#	CustomLog "/var/log/access_site.log" combined 
 </VirtualHost>
 EOF'
 
@@ -21,8 +21,8 @@ sudo bash -c 'cat > /etc/apache2/sites-enabled/site2.conf << EOF
 <VirtualHost *:80>
 	ServerName www.site2.b13.lan
 	DocumentRoot /var/www/site2 
-	ErrorLog "/var/log/error_site.log" 
-	CustomLog "/var/log/access_site.log" combined 
+#	ErrorLog "/var/log/error_site.log" 
+#	CustomLog "/var/log/access_site.log" combined 
 </VirtualHost>
 EOF'
 
@@ -30,8 +30,8 @@ sudo bash -c 'cat > /etc/apache2/sites-enabled/000-default.conf << EOF
 <VirtualHost *:80>
 	ServerAdmin webmaster@localhost
 	DocumentRoot /var/www/site1 
-	ErrorLog "/var/log/error_site.log" 
-	CustomLog "/var/log/access_site.log" combined 
+#	ErrorLog "/var/log/error_site.log" 
+#	CustomLog "/var/log/access_site.log" combined 
 </VirtualHost>
 EOF'
 sudo a2ensite site1.conf
