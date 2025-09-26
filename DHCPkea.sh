@@ -45,22 +45,22 @@ sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF
 				"reservations": [
                     {
                         "hw-address": "",
-                        "ip-address": "10.200.13.2",
+                        "ip-address": "10.10.13.2",
                         "hostname": ""
                     },
 					{
                         "hw-address": "",
-                        "ip-address": "10.200.13.3",
+                        "ip-address": "10.10.13.3",
                         "hostname": ""
                     },
 					{
                         "hw-address": "",
-                        "ip-address": "10.200.13.4",
+                        "ip-address": "10.10.13.4",
                         "hostname": ""
                     },
 					{
                         "hw-address": "",
-                        "ip-address": "10.200.13.5",
+                        "ip-address": "10.10.13.5",
                         "hostname": ""
                     }
                 ]
