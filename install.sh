@@ -2,7 +2,7 @@
 
 set -e
 
-REPO_BASE="https://raw.githubusercontent.com/network-tools/new/main"
+REPO_BASE="https://raw.githubusercontent.com/network-tools/main"
 DOSSIER_INSTALL="/usr/local/bin"
 
 TOOLS=("DHCPkea" "DNSbind" "apache")
