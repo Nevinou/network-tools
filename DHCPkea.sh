@@ -44,24 +44,9 @@ sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF
 				], 
 				"reservations": [
                     {
-                        "hw-address": "",
-                        "ip-address": "10.10.13.2",
-                        "hostname": ""
-                    },
-					{
-                        "hw-address": "",
-                        "ip-address": "10.10.13.3",
-                        "hostname": ""
-                    },
-					{
-                        "hw-address": "",
+                        "hw-address": "bc:24:11:58:83:2a",
                         "ip-address": "10.10.13.4",
-                        "hostname": ""
-                    },
-					{
-                        "hw-address": "",
-                        "ip-address": "10.10.13.5",
-                        "hostname": ""
+                        "hostname": "ClientLinux"
                     }
                 ]
 			} 
