@@ -23,11 +23,7 @@ sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF
 		"subnet4": [ 
 			{ 
 				"subnet": "10.10.0.0/16", 
-				"pools": [ 
-					{ 
-						"pool": "10.10.13.1 - 10.10.13.10" 
-					} 
-				], 
+
 				"option-data": [ 
 					{
 						"name": "domain-name-servers", 
@@ -43,11 +39,27 @@ sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF
 					} 
 				], 
 				"reservations": [
+					{
+                        "hw-address": "bc:24:11:8b:6a:87",
+                        "ip-address": "10.10.13.2",
+                        "hostname": "ServeurMail"
+                    },
+					{
+                        "hw-address": "dc:24:11:7c:e1:d6",
+                        "ip-address": "10.10.13.3",
+                        "hostname": "W11"
+                    },
                     {
                         "hw-address": "bc:24:11:58:83:2a",
                         "ip-address": "10.10.13.4",
                         "hostname": "ClientLinux"
+                    },
+					{
+                        "hw-address": "bc:24:11:88:f5:32",
+                        "ip-address": "10.10.13.5",
+                        "hostname": "ServeurSplunk"
                     }
+					
                 ]
 			} 
 		],
