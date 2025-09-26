@@ -29,10 +29,10 @@ sudo bash -c 'cat > /etc/bind/named.conf.local << EOF
 zone "b13.lan"{
 type master;
 file "/etc/bind/db.b13.lan";
-allow-transfer {10.10.12.1;};
+allow-transfer {10.10.14.1;};
 };
 // ajouter la zone esclave
-zone "b14.lan"{
+zone "b12.lan"{
 type slave;
 file "/etc/bind/db.b14.lan";
 masters {10.10.14.1;};
