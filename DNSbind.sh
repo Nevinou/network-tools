@@ -11,18 +11,18 @@ options {
 	allow-query {any;}; 
 	forward first;
 	forwarders {
-		8.8.8.8;
+		129.20.211.23;
 	};
 	listen-on { any;};
 };
-logging {
-	channel query_log {
-		file "/var/log/named/query.log";
-		severity info;
-		print-time yes;
-	};
-	category queries { query_log; };
-};
+#logging {
+#	channel query_log {
+#		file "/var/log/named/query.log";
+#		severity info;
+#		print-time yes;
+#	};
+#	category queries { query_log; };
+#};
 EOF'
 # on peut rajouter une ACL voir IT-connect
 sudo bash -c 'cat > /etc/bind/named.conf.local << EOF
