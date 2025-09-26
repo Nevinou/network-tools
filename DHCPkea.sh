@@ -7,7 +7,7 @@ sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF
 { 
 "Dhcp4": {
 	"interfaces-config": {
-		"interfaces": [ "ens192" ]
+		"interfaces": [ "ens18" ]
 	}, 
 	"valid-lifetime" : 600,
 	"max-valid-lifetime":7200, 
