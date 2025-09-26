@@ -2,7 +2,7 @@
 
 sudo apt install kea-dhcp4-server -y
 # copy du fichier de /etc/kea/kea-dhcp4.conf en /etc/kea/kea-dhcp4.conf_exemple
-sudo cp /etc/kea/kea-dhcp4.conf /home/user/kea-dhcp4.conf_exemple
+sudo cp /etc/kea/kea-dhcp4.conf /etc/kea/kea-dhcp4.conf_exemple
 sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF 
 { 
 "Dhcp4": {
@@ -11,8 +11,8 @@ sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF
 	}, 
 	"valid-lifetime" : 600,
 	"max-valid-lifetime":7200, 
-	"renew-timer": 345600, 
-	"rebind-timer": 604800, 
+	"renew-timer": 3400, 
+	"rebind-timer": 6000, 
 	"authoritative": true, 
 	"lease-database": {
 		"type": "memfile", 
@@ -22,10 +22,10 @@ sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF
 	}, 
 		"subnet4": [ 
 			{ 
-				"subnet": "10.10.13.0/16", 
+				"subnet": "10.10.0.0/16", 
 				"pools": [ 
 					{ 
-						"pool": "10.10.13.0 - 10.10.13.0" 
+						"pool": "10.10.13.1 - 10.10.13.10" 
 					} 
 				], 
 				"option-data": [ 
