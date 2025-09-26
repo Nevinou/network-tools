@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'nameserver 129.20.211.23' > /etc/resolv.conf
+sudo echo 'nameserver 129.20.211.23' > /etc/resolv.conf
 sudo apt install bind9 -y
 
 # copy du fichier de /etc/bind/named.conf.option en /etc/bind/named.conf.option_exemple
