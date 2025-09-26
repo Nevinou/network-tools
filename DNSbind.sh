@@ -34,7 +34,7 @@ file "/etc/bind/db.b13.lan";
 zone "b14.lan"{
 type slave;
 file 
-masters {10.10.14.1}
+masters {10.10.14.1;}
 };
 EOF'
 sudo touch /etc/bind/db.13.lan
