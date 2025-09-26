@@ -11,7 +11,7 @@ options {
 	allow-query {any;}; 
 	forward first;
 	forwarders {
-		10.10.0.1;
+		8.8.8.8;
 	};
 	listen-on { any;};
 };
@@ -24,7 +24,7 @@ logging {
 	category queries { query_log; };
 };
 EOF'
-# on peut rajouter de ACL voir IT-connect
+# on peut rajouter une ACL voir IT-connect
 sudo bash -c 'cat > /etc/bind/named.conf.local << EOF
 zone "b13.lan"{
 type master;
