@@ -1,10 +1,14 @@
 #!/bin/bash
 set -e
 
+
+wget -O splunkforwarder-10.0.0-e8eb0c4654f8-linux-amd64.deb "https://download.splunk.com/products/universalforwarder/releases/10.0.0/linux/splunkforwarder-10.0.0-e8eb0c4654f8-linux-amd64.deb"
+
+
 # === Variables à personnaliser ===
-SPLUNK_VERSION="9.2.0"
-SPLUNK_BUILD="a0c72a66db1f"
-SPLUNK_DEB="splunkforwarder-${SPLUNK_VERSION}-${SPLUNK_BUILD}-Linux-x86_64.deb"
+SPLUNK_VERSION="10.0.0"
+SPLUNK_BUILD="e8eb0c4654f8"
+SPLUNK_DEB="splunkforwarder-${SPLUNK_VERSION}-${SPLUNK_BUILD}-linux-amd64.deb"
 SPLUNK_URL="https://download.splunk.com/products/universalforwarder/releases/${SPLUNK_VERSION}/linux/${SPLUNK_DEB}"
 SPLUNK_HOME="/opt/splunkforwarder"
 SPLUNK_ADMIN_PASS="123Soleil%"
