@@ -34,8 +34,8 @@ allow-transfer {10.10.14.1;};
 // ajouter la zone esclave
 zone "b12.lan"{
 type slave;
-file "/etc/bind/db.b14.lan";
-masters {10.10.14.1;};
+file "/etc/bind/db.b12.lan";
+masters {10.10.12.1;};
 };
 zone "lan"{
 	type forward;
