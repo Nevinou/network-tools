@@ -18,6 +18,11 @@ options {
 EOF'
 
 sudo bash -c 'cat > /etc/bind/named.conf.local << EOF
+zone "lan"{
+	type forward;
+	forwarders{10.10.0.1;};
+};
+
 zone "b13.lan"{
 	type master;
 	file "/etc/bind/db.b13.lan";
@@ -28,11 +33,6 @@ zone "b12.lan"{
 	type slave;
 	file "/etc/bind/db.b12.lan";
 	masters {10.10.12.1;};
-};
-
-zone "lan"{
-	type forward;
-	forwarders{10.10.0.1;};
 };
 EOF'
 
