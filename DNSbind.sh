@@ -2,6 +2,7 @@
 sudo apt autoremove -y
 sudo echo 'nameserver 129.20.211.23' > /etc/resolv.conf
 sudo apt install bind9 -y
+sudo >/ect/bind/db.b12.lan
 
 # copy du fichier de /etc/bind/named.conf.option en /etc/bind/named.conf.option_exemple
 # sudo cp /etc/bind/named.conf.option /home/user/named.conf.option_exemple
@@ -27,16 +28,18 @@ EOF'
 # on peut rajouter une ACL voir IT-connect
 sudo bash -c 'cat > /etc/bind/named.conf.local << EOF
 zone "b13.lan"{
-type master;
-file "/etc/bind/db.b13.lan";
-allow-transfer {10.10.14.1;};
+	type master;
+	file "/etc/bind/db.b13.lan";
+	allow-transfer {10.10.14.1;};
 };
+
 // ajouter la zone esclave
 zone "b12.lan"{
-type slave;
-file "/etc/bind/db.b12.lan";
-masters {10.10.12.1;};
+	type slave;
+	file "/etc/bind/db.b12.lan";
+	masters {10.10.12.1;};
 };
+
 zone "lan"{
 	type forward;
 	forwarders{10.10.0.1;};
