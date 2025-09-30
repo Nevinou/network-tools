@@ -42,7 +42,7 @@ zone "lan"{
 	forwarders{10.10.0.1;};
 };
 EOF'
-sudo touch /etc/bind/db.13.lan
+sudo touch /etc/bind/db.b13.lan
 sudo bash -c 'cat > /etc/bind/db.b13.lan << EOF
 
 \$TTL 3H
