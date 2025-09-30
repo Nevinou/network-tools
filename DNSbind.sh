@@ -31,7 +31,7 @@ zone "b13.lan"{
 
 zone "b12.lan"{
 	type slave;
-	file "/etc/bind/db.b12.lan";
+	file "/var/cache/bind/db.b12.lan";
 	masters { 10.10.12.1; };
 };
 EOF'
