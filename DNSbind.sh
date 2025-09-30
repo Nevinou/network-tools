@@ -33,7 +33,7 @@ zone "b13.lan"{
 	allow-transfer {10.10.14.1;};
 };
 
-// ajouter la zone esclave
+# ajouter la zone esclave
 zone "b12.lan"{
 	type slave;
 	file "/etc/bind/db.b12.lan";
