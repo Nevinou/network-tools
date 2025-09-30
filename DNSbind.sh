@@ -8,11 +8,12 @@ sudo apt install bind9 -y
 sudo bash -c 'cat > /etc/bind/named.conf.options << EOF
 options {
 	directory "/var/cache/bind";
-	allow-query {any;}; 
-	forward first;
+	dnssec-validation no;
+	allow-query { any; }; 
 	forwarders {
 		10.10.0.1;
 	};
+	recursion yes;
 	listen-on { any; };
 };
 EOF'
@@ -31,8 +32,8 @@ zone "b13.lan"{
 
 zone "b12.lan"{
 	type slave;
+	primaries { 10.10.12.1; };
 	file "/var/cache/bind/db.b12.lan";
-	masters { 10.10.12.1; };
 };
 EOF'
 
@@ -40,16 +41,16 @@ sudo touch /etc/bind/db.b13.lan
 sudo bash -c 'cat > /etc/bind/db.b13.lan << EOF
 
 \$TTL 3H
-@ IN SOA ns.b13.lan. mailaddress.b13.lan.(
+@ IN SOA serveur-FI2B13.b13.lan. mailaddress.b13.lan.(
 2025051901
 6H
 1H
 5D
 1D)
 ;
-@ IN NS ns.b13.lan.
+@ IN NS serveur-FI2B13.b13.lan.
 @ IN MX 10 mail.b13.lan.
-ns A 10.10.13.1
+serveur-FI2B13 A 10.10.13.1
 serveur A 10.10.13.1
 mail A 10.10.13.2
 debian A 10.10.13.3
