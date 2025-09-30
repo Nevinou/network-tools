@@ -24,7 +24,7 @@ zone "lan"{
 };
 
 zone "b13.lan"{
-	type master;
+	type primary;
 	file "/etc/bind/db.b13.lan";
 	allow-transfer {10.10.14.1;};
 };
