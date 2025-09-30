@@ -45,7 +45,7 @@ sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF
                         "hostname": "ServeurMail"
                     },
 					{
-                        "hw-address": "dc:24:11:7c:e1:d6",
+                        "hw-address": "bc:24:11:7c:e1:d6",
                         "ip-address": "10.10.13.3",
                         "hostname": "W11"
                     },
