@@ -15,6 +15,17 @@ options {
 	};
 	recursion yes;
 	listen-on { any; };
+	
+};
+logging {
+  channel error_log {
+    file "/var/log/named/errors.log" versions 3 size 5m;
+    severity error;
+    print-time yes;
+  };
+  category default {
+    error_log;
+  };
 };
 EOF'
 
