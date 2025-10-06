@@ -27,7 +27,7 @@ sudo bash -c 'cat > /etc/kea/kea-dhcp4.conf << EOF
 				"option-data": [ 
 					{
 						"name": "domain-name-servers", 
-						"data": "10.10.13.1"
+						"data": "10.10.13.1, 10.10.0.1"
 					}, 
 					{
 						"name": "domain-search",
